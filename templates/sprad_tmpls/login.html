@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link rel="stylesheet" href="{% static 'css/sprad.css' %}">
+</head>
+<body>
+Hi Girls!
+ <div style="height: 50%" class="div_ani02">
+      <input type="button" value="sdsdfsdf">
+ </div>
+
+      <div class="page-header">
+    {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"></a>
+    {% endif %}
+            <h1><a href="/"></a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+</body>
+</html>

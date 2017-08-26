@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<html>
+        <head>
+            <title>Sport radar</title>
+ <!--   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">  -->
+ <!--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sprad.css' %}">
+<!--    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->
+    <script src="{% static 'js/lib/jquery-3.2.1.js' %} "></script>
+    <script src="{% static 'js/lib/bootstrap.js' %} "></script>
+    <script src="{% static 'js/dir01/script1.js' %} "></script>
+    <script src="{% static 'js/dir01/script2.js' %} "></script>
+
+        </head>
+        <body>
+
+
+        <ul class="nav nav-tabs" style="justify-content: center">
+<li class="li01"><a href="/">Теннис</a></li>
+<li class="li01"><a href="/">Футбол</a></li>
+<li class="li01"><a href="/hockey/">Хоккей</a></li>
+<li class="li01"><a href="/basketball/">Баскетбол</a></li>
+<li class="li01"><a href="/volleyball/">Волейбол</a></li>
+<li class="li01"><a href="/handball/">Гандбол</a></li>
+<li class="li01"><a href="/futsal/">Футзал</a></li>
+<li class="li01"><a href="/baseball/">Бейсбол</a></li>
+<li class="li01"><a href="/winter-sports/">Зимние виды</a></li>
+<li class="li01">username: <a id="brandinguser" href="/brandinguser/"></a></li>
+<li class="li01"><a href="/authoriz?logout='y'"><b>logout</b></a></li>
+        </ul>
+
+    <div class="content container">
+        <div class="row">
+             <div class="col-md-4" style="border:1px solid #a6d5ec;">
+                {% block content %}
+                {% endblock %}
+             </div>
+             <div class="col-md-8" class="container-fluid" style="border:1px solid #a6d5ec;">
+                {% block content1 %}
+                {% endblock %}
+             </div>
+        </div>
+    </div>
+        </body>
+    </html>

@@ -1,0 +1,21 @@
+ {% extends 'sprad_tmpls/jonny_base.html' %}
+
+     {% block content %}
+     {% csrf_token %}
+<!--        <form method="GET" class="post-form">
+            <button class="save btn btn-default" onclick='botton01()'>run script</button>
+        </form>
+        {{ reft }}
+-->
+
+<!-- <div class="container">  -->
+  <button class="btn btn-info" style="width: 100%" id="button01">Get Tournaments list</button> <!-- onclick='botton01()' -->
+  <div id='container02' class="div01" style="border:1px solid #c5ec4f;"> </div>
+<!-- </div>  -->
+
+    {% endblock %}
+{% block content1 %}
+      <div id='container03' style="border:1px solid #c5ec4f;">
+      </div>
+
+{% endblock %}

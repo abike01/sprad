@@ -1,0 +1,35 @@
+<div class="container" style=" margin-left: 20px">
+<p>Регистрация на сайте</p>
+
+<form data-toggle="validator" role="form">
+<input type="text" class="form-control" placeholder="Имя пользователя" required autofocus style="width: 30rem" />
+<input type="password" class="form-control" placeholder="Ваш пароль" required style="width: 30rem" />
+<input type="password" class="form-control" placeholder="Confirm password" required style="width: 30rem" />
+<input type="text" class="form-control" id="t-emattl" name="t-emattl" placeholder="example@domain.com" value="" style="width: 30rem">
+    <div class="help-block with-errors"></div>
+</form>
+
+  <div class="row">
+    <p style=" margin-left: 20px">
+      <button type="button" class="btn btn-success" style="width: 150px" onclick="registsave($('form'));">Сохранить</button>
+    </p>
+  </div>
+</div>
+
+<!--
+<form role="form">
+ <div class="form-group">
+  <label for="email">Email</label>
+  <input type="email" class="form-control" id="email" placeholder="Введите email">
+  <p class="help-block">Пример строки с подсказкой</p>
+ </div>
+ <div class="form-group">
+  <label for="pass">Пароль</label>
+  <input type="password" class="form-control" id="pass" placeholder="Пароль">
+ </div>
+ <div class="checkbox">
+  <label><input type="checkbox"> Чекбокс</label>
+ </div>
+ <button type="submit" class="btn btn-success">Войти</button>
+</form>
+-->
