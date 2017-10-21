@@ -28,14 +28,15 @@ $(document).ready(function(){
                         if (json != 'None') {
                             json = JSON.parse(json);
                             tRow='';
+                            var ind=0;
             for (var key in json) {
                 let getl = json[key];
                 let women ='';
 
                 if(getl['f3'].toLowerCase() =='women')
                    women ='bgcolor="#FBACAC"';
-                   tRow += '<tr '+women+'><td style="display:none;">'+getl['f1']+'</td>' +
-                       '<td style="display:none;"></td><td>' + getl['f2'] + '; ' + getl['f3'] + '</td></tr>';
+                tRow += '<tr '+women+'><td style="display:none;">'+getl['f1']+'</td>' +
+                       '<td style="display:none;"></td><td>pair '+(++ind)+'; ' + getl['f3'] + '</td></tr>';
             }
             tRow = '<table id=\'eventsTable3\'>' + tRow + '</table>';
 

@@ -31,7 +31,7 @@ def threadingTimer():
     thTr.start()
 
     toc = time()
-    print("====: call the link, int: ", random.randint(8, 12),'sec, diff: ', toc - Tic.tic)
+    print("====: call the link, int: ", random.randint(ps_o.interval_rmin, ps_o.interval_rmax),'sec, diff: ', toc - Tic.tic)
     tennisinfo_f()
     if toc-Tic.tic>ps_o.poll_time:
         thTr.cancel()
@@ -95,7 +95,7 @@ def tennisinfo_f():
 
 def matchstatus_live(ij, matchstatus, matches_ij, tournaments):  # data['doc'][0]['data']['matches'][ij]
     jdatal = {}
-
+#gamescore
     jdatal['matches_id'] = ij
     jdatal['tid'] = matches_ij['match']['_tid']
     jdatal['matchstatus'] = matchstatus
@@ -191,8 +191,8 @@ def matchstatus_live(ij, matchstatus, matches_ij, tournaments):  # data['doc'][0
             jdatal['prize_amount'] = tournaments[ijt]['tennisinfo']['prize']['amount']
             jdatal['prize_currency'] = tournaments[ijt]['tennisinfo']['prize']['currency']
             jdatal['tourn_name'] = tournaments[ijt]['name']
-            jdatal['ground_id'] = tournaments[ijt]['ground']['_id']
-            jdatal['ground_mainid'] = tournaments[ijt]['ground']['mainid']
+            jdatal['ground_id'] = '001'#tournaments[ijt]['ground']['_id']
+            jdatal['ground_mainid'] = '007'# tournaments[ijt]['ground']['mainid']
             jdatal['itfstartdate'] = tournaments[ijt]['itfstartdate']
             jdatal['itfenddate'] = tournaments[ijt]['itfenddate']
 

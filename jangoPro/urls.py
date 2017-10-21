@@ -21,7 +21,7 @@ from django.contrib import admin
 from sprad import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+#    url(r'^admin/', admin.site.urls),
     url(r'^$', views.jonny, name='jonny'),
     url(r'^get_scipt/', views.controller, name='controller'),
     url(r'^authoriz/', views.authorization, name='authorization'),
